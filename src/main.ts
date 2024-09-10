@@ -1,10 +1,10 @@
+// workerTaskCreator を使ってのやつ
+
 import Worker from './worker?worker'
 import { getHelloTaskCaller } from './helloTask'
 import { getAddingTaskCaller } from './addingTask'
 import { getWaitingTaskCaller } from './waitingTask'
 import { getFetchJsonTaskCaller } from './fetchJsonTask'
-
-// workerTaskCreator を使ってのやつ
 
 const worker = new Worker()
 
@@ -31,7 +31,7 @@ showLog(`callAddingTask([1, 2]`, callAddingTask([1, 2]))
 showLog(`callWaitingTask(2000)`, callWaitingTask(2000))
 showLog(`callFetchJsonTask('./dummy.json')`, callFetchJsonTask('/dummy.json'))
 
-// シンプルなやつ
+// ライブラリ使わないやつ
 
 import NiceTaskWoker from './niceTaskWorker?worker'
 import { getNiceTaskCaller } from './niceTask'

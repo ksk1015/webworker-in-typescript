@@ -1,6 +1,6 @@
 type NiceTaskParams = {
   name: string
-  age: 20
+  age: number
 }
 
 type NiceTaskResult = string
