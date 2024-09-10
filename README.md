@@ -71,3 +71,7 @@ type ResultMessage = {
   result: NiceTaskResult
 }
 ```
+
+## デモ
+
+https://ksk1015.github.io/webworker-in-typescript/
