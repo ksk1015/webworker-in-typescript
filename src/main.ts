@@ -29,7 +29,12 @@ const showLog = (name: string, callTask: Promise<unknown>) => {
 showLog(`callHelloTask()`, callHelloTask())
 showLog(`callAddingTask([1, 2]`, callAddingTask([1, 2]))
 showLog(`callWaitingTask(2000)`, callWaitingTask(2000))
-showLog(`callFetchJsonTask('./dummy.json')`, callFetchJsonTask('/dummy.json'))
+
+// 本番環境がルートじゃないことからpublicディレクトリへのパスがむずい
+showLog(
+  `callFetchJsonTask('./dummy.json')`,
+  callFetchJsonTask(import.meta.env.PROD ? '../dummy.json' : '/dummy.json')
+)
 
 // ライブラリ使わないやつ
 
