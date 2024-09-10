@@ -29,7 +29,7 @@ export const registerNiceTask = () => {
 }
 
 export const getNiceTaskCaller = (worker: Worker) => {
-  return async (params: NiceTaskParams) => {
+  return (params: NiceTaskParams) => {
     return new Promise<NiceTaskResult>((resolve) => {
       const id = Math.random().toString(36) + performance.now().toString(36)
       const handleMessage = (e: MessageEvent<ResultMessage>) => {
